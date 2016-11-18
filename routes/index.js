@@ -12,8 +12,8 @@ router.get('/', function (req, res, next) {
   const findingHotels = Hotel.findAll({});
   const findingActivities = Activity.findAll({});
   const findingRestaurants = Restaurant.findAll({});
-
-  return Promise.all([findingActivities, findingHotels, findingRestaurants])
+  const findingAllTripOptions =
+  Promise.all([findingActivities, findingHotels, findingRestaurants])
           .then(function (data) {
             res.render('index', {
               templateHotels: data[1],
@@ -22,4 +22,6 @@ router.get('/', function (req, res, next) {
             })
           })
           .catch(next);
+          
+  return findingAllTripOptions;
 });
