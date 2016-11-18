@@ -1,7 +1,25 @@
 const express = require('express');
 const router = express.Router();
+const models = require('../models');
+const Hotel = models.Hotel;
+const Place = models.Place;
+const Activity = models.Activity;
+const Restaurant = models.Restaurant;
+
 module.exports = router;
 
 router.get('/', function (req, res, next) {
-    res.render('index');
+  const findingHotels = Hotel.findAll({});
+  const findingActivities = Activity.findAll({});
+  const findingRestaurants = Restaurant.findAll({});
+
+  return Promise.all([findingActivities, findingHotels, findingRestaurants])
+          .then(function (data) {
+            res.render('index', {
+              templateHotels: data[1],
+              templateRestuarants: data[2],
+              templateActivities: data[0]
+            })
+          })
+          .catch(next);
 });

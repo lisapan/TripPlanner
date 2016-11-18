@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const volleyball = require('volleyball');
 const nunjucks = require('nunjucks');
 const models = require('./models');
+
 const app = express();
 
 app.set('view engine', 'html');
@@ -16,7 +17,9 @@ app.use(volleyball);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(express.static(__dirname + '/public'));
+app.use('/public', express.static(__dirname + '/public'));
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 
 app.use('/', require('./routes'));
 
@@ -44,6 +47,3 @@ models.db.sync({})
         });
     })
     .catch(console.error);
-
-
-
