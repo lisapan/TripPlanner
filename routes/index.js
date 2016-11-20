@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
           .then(function (data) {
             res.render('index', {
               templateHotels: data[1],
-              templateRestuarants: data[2],
+              templateRestaurants: data[2],
               templateActivities: data[0]
             })
           })
