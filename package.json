@@ -2,7 +2,10 @@
   "name": "trip-planner",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon app.js"
+    "build-css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
+    "start:production": "node app.js",
+    "start:dev": "nodemon -e html,css,js app.js",
+    "start": "npm run start:dev"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -16,6 +19,7 @@
     "volleyball": "^1.4.1"
   },
   "devDependencies": {
+    "node-sass": "^3.13.0",
     "nodemon": "^1.11.0"
   }
 }

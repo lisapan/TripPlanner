@@ -3,28 +3,68 @@
 {% block title %}Your Trip{% endblock %}
 
 {% block content %}
-<div id="app" class="clearfix">
-    <h1>Plan your next best trip ever.</h1>
-    //Hotels
-    <select>
-      {% for hotel in templateHotels %}
-        <option>{{hotel.name}}</option>
-      {% endfor %}
-    </select>
+<div class = "contentBody container-fluid">
+  <div class = "row">
+    <!-- Map Module -->
+    <div class="map col-lg-8">
+      <div id="map"></div>
+    </div>
+    <!-- End of Map Module -->
 
-    //Activities
-    <select>
-      {% for activity in templateActivities %}
-        <option>{{activity.name}}</option>
-      {% endfor %}
-    </select>
 
-    //Restaurants
-    <select>
-      {% for restaurant in templateRestuarants %}
-        <option>{{restaurant.name}}</option>
-      {% endfor %}
-    </select>
+    <div class="planner col-lg-4">
+    <!-- Selection Module -->
+      <div id="app" class="clearfix">
+        <!-- HOTEL FORM -->
+        <div class="form-group">
+          <label for="select">Hotels</label>
+          <form class="form-inline">
+            <select class = "dropMenu form-control">
+              {% for hotel in templateHotels %}
+                <option>{{hotel.name}}</option>
+              {% endfor %}
+            </select>
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          </form>  
+        </div>
+        <!-- End of Hotel Form -->
 
+        <!-- Activities Form -->
+        <div class="form-group">
+          <label for="select">Activities</label>
+          <select class = "form-control">
+            {% for activity in templateActivities %}
+              <option>{{activity.name}}</option>
+            {% endfor %}
+          </select>
+          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </div>  
+        <!-- End of Activities Form -->
+
+        <!--  Restaurants Form -->
+        <div class="form-group">
+          <label for="select">Restaurants</label>   
+          <select class = "form-control">
+            {% for restaurant in templateRestuarants %}
+              <option>{{restaurant.name}}</option>
+            {% endfor %}
+          </select>
+          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </div>
+        <!-- End of Restaurants Form -->
+      </div>
+      <!-- End of Selection Module -->
+
+
+      <!-- Itinerary Module -->
+      <div id="days" class="clearfix">
+        <h1>Day 1</h1>
+        <label>My Hotel</label>
+        <label>My Restaurants</label>
+        <label>My Activities</label>
+      </div>
+      <!-- End of Itinerary Module -->
+    </div>
+  </div>
 </div>
 {% endblock %}

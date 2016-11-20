@@ -1,0 +1,30 @@
+h1 {
+  color: #bbb; }
+
+#map {
+  height: 100%; }
+
+.contentBody {
+  height: 100vh; }
+
+.map {
+  padding: 50px 0 0 0;
+  height: 100vh;
+  margin: 0; }
+
+.planner {
+  padding-top: 60px;
+  height: 100vh;
+  background-color: #BFB5AD; }
+
+#app {
+  padding: 5px;
+  margin: 5px 5px 20px 5px;
+  background-color: #EEECEA;
+  border-radius: 6px; }
+
+.dropMenu {
+  width: 90%; }
+
+.fa-plus-circle {
+  color: #A3CCFF; }

@@ -12,6 +12,7 @@ Place.hasMany(Activity);
 Place.hasMany(Hotel);
 Restaurant.belongsTo(Place);
 
+
 module.exports = {
     db: theDbConnection,
     Hotel: Hotel,
@@ -19,3 +20,4 @@ module.exports = {
     Restaurant: Restaurant,
     Activity: Activity
 };
+
