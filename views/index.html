@@ -19,7 +19,7 @@
         <div class="form-group">
           <label for="select">Hotels</label>
           <form class="form-inline">
-            <select class = "dropMenu form-control">
+            <select class = "dropMenu">
               {% for hotel in templateHotels %}
                 <option>{{hotel.name}}</option>
               {% endfor %}
@@ -33,7 +33,7 @@
         <div class="form-group">
           <label for="select">Activities</label>
           <form class="form-inline">
-            <select class = "dropMenu form-control">
+            <select class = "dropMenu">
               {% for activity in templateActivities %}
                 <option>{{activity.name}}</option>
               {% endfor %}
@@ -47,7 +47,7 @@
         <div class="form-group">
           <label for="select">Restaurants</label>   
           <form class="form-inline">
-            <select class = "dropMenu form-control">
+            <select class = "dropMenu">
               {% for restaurant in templateRestaurants %}
                 <option>{{restaurant.name}}</option>
               {% endfor %}
