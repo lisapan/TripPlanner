@@ -20,7 +20,4 @@ const Restaurant = dbConnection.define('restaurant', {
     }
 });
 
-
-
-
 module.exports = Restaurant;

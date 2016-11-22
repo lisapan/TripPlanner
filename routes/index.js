@@ -37,8 +37,8 @@ router.get('/', function (req, res, next) {
     }
   });
   const findingAllTripOptions =
-  Promise.all([findingActivities, 
-               findingHotels, 
+  Promise.all([findingActivities,
+               findingHotels,
                findingRestaurants,
                findingSelectedHotel,
                findingSelectedRestaurants,
@@ -54,6 +54,6 @@ router.get('/', function (req, res, next) {
             })
           })
           .catch(next);
-          
+
   return findingAllTripOptions;
 });

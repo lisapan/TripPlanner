@@ -39,7 +39,7 @@ app.use(function (err, req, res, next) {
     });
 });
 
-models.db.sync({})
+models.db.sync({force: true})
     .then(function () {
         app.listen(3000, function (err) {
             if (err) return console.error(err);
