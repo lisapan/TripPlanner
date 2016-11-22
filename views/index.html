@@ -62,10 +62,37 @@
 
       <!-- Itinerary Module -->
       <div id="days" class="clearfix">
-        <h1>Day 1</h1>
-        <label>My Hotel</label>
-        <label>My Restaurants</label>
-        <label>My Activities</label>
+        <div class="row dayHeader">
+          <h1 id="thisDay">Day 1</h1>
+        </div>
+        <div class="row dayPages">  
+          <ul class="pagination">
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">+</a></li>
+          </ul>
+        </div>
+        <div class ="row">
+          <dl>
+            <dt>My Hotel</dt>
+            <ul>
+              <li>{{selectedHotel.name}}</li>
+            </ul>
+            <dt>My Restaurants</dt>
+            <ul>
+              {% for restaurant in selectedRestaurants %}
+              <li>{{restaurant.name}}</li>
+              {% endfor %}
+            </ul>
+            <dt>My Activities</dt>
+              <ul>
+                {% for activity in selectedActivities %}
+                <li>{{activity.name}}</li>
+                {% endfor %}
+              </ul>
+          </dl>
+        </div>
       </div>
       <!-- End of Itinerary Module -->
     </div>
