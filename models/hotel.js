@@ -16,6 +16,4 @@ const Hotel = dbConnection.define('hotel', {
     }
 });
 
-
-
 module.exports = Hotel;

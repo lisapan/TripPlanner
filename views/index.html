@@ -3,101 +3,107 @@
 {% block title %}Your Trip{% endblock %}
 
 {% block content %}
-<div class = "contentBody container-fluid">
-  <div class = "row">
-    <!-- Map Module -->
-    <div class="map col-lg-8">
-      <div id="map"></div>
-    </div>
-    <!-- End of Map Module -->
+<div class = "contentBody">
 
+  <!-- Cover Page -->
+  <div class="bsc-jumbotron clearfix">
+    <div class="container-fluid">
+      <img id="brand-icon" src="../public/img/tripplanner_icon.svg">
+      <h1 class="cover-heading">TripPlanner</h1>
+      <h2 class="sub-heading">Plan your next best-trip-ever.</h2>
+    </div> <!-- .container-fluid -->
+  </div> <!-- .bsc-jumbotron -->
+  <!-- End Cover Page -->
 
-    <div class="planner col-lg-4">
-    <!-- Selection Module -->
-      <div id="app" class="clearfix">
-        <!-- HOTEL FORM -->
-        <div class="form-group">
-          <label for="select">Hotels</label>
-          <form class="form-inline">
-            <select class = "dropMenu">
-              {% for hotel in templateHotels %}
-                <option>{{hotel.name}}</option>
-              {% endfor %}
-            </select>
-            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-          </form>  
-        </div>
-        <!-- End of Hotel Form -->
+  <!-- Dashboard Page-->
+  <div class="container-fluid" id="dashboard">
+    <div class = "row" >
+      <!-- MAP MODULE -->
+      <div id="map" class="clearfix col-xs-12 col-sm-12 col-md-8 col-lg-8">
+      </div> <!-- End of Map Module -->
 
-        <!-- Activities Form -->
-        <div class="form-group">
-          <label for="select">Activities</label>
-          <form class="form-inline">
-            <select class = "dropMenu">
-              {% for activity in templateActivities %}
-                <option>{{activity.name}}</option>
-              {% endfor %}
-            </select>
-            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-          </form>  
-        </div>  
-        <!-- End of Activities Form -->
+      <!-- PLANNING MODULE -->
+      <div class="planner col-xs-12 col-sm-12 col-md-4 col-lg-4">
 
-        <!--  Restaurants Form -->
-        <div class="form-group">
-          <label for="select">Restaurants</label>   
-          <form class="form-inline">
-            <select class = "dropMenu">
-              {% for restaurant in templateRestaurants %}
-                <option>{{restaurant.name}}</option>
-              {% endfor %}
-            </select>
-            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-          </form>  
-        </div>
-        <!-- End of Restaurants Form -->
-      </div>
-      <!-- End of Selection Module -->
+        <!-- Selection Block -->
+        <div id="dayOptions">
 
-
-      <!-- Itinerary Module -->
-      <div id="days" class="clearfix">
-        <div class="row dayHeader">
-          <h1 id="thisDay">Day 1</h1>
-        </div>
-        <div class="row dayPages">  
-          <ul class="pagination">
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">+</a></li>
-          </ul>
-        </div>
-        <div class ="row">
-          <dl>
-            <dt>My Hotel</dt>
-            <ul>
-              <li>{{selectedHotel.name}}</li>
-            </ul>
-            <dt>My Restaurants</dt>
-            <ul>
-              {% for restaurant in selectedRestaurants %}
-              <li>{{restaurant.name}}</li>
-              {% endfor %}
-            </ul>
-            <dt>My Activities</dt>
-              <ul>
-                {% for activity in selectedActivities %}
-                <li>{{activity.name}}</li>
+          <!-- Select Hotel -->
+          <div class="form-group">
+            <label for="select">Hotels</label>
+            <form class="form-inline">
+              <select class = "dropMenu">
+                {% for hotel in templateHotels %}
+                  <option>{{hotel.name}}</option>
                 {% endfor %}
-              </ul>
-          </dl>
-        </div>
-      </div>
-      <!-- End of Itinerary Module -->
-    </div>
-  </div>
-</div>
-{% endblock %}
+              </select>
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </form>
+          </div> <!-- end hotel selection -->
 
-<!-- Testing branching -->
+          <!-- Select Activities -->
+          <div class="form-group">
+            <label for="select">Activities</label>
+            <form class="form-inline">
+              <select class = "dropMenu">
+                {% for activity in templateActivities %}
+                  <option>{{activity.name}}</option>
+                {% endfor %}
+              </select>
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </form>
+          </div>  <!-- end activity selection -->
+
+          <!--  Select Restaurants -->
+          <div class="form-group">
+            <label for="select">Restaurants</label>
+            <form class="form-inline">
+              <select class = "dropMenu">
+                {% for restaurant in templateRestaurants %}
+                  <option>{{restaurant.name}}</option>
+                {% endfor %}
+              </select>
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </form>
+          </div> <!-- end restaurant selection -->
+
+        </div> <!-- End  Selection Block -->
+
+        <!-- Day Itinerary Block -->
+        <div id="days">
+            <h1 id="thisDay">Day 1</h1>
+          <div class="dayPages">
+            <ul class="pagination">
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">+</a></li>
+            </ul>
+          </div>
+          <div class ="row" >
+            <dl id="iteneraryList">
+              <dt>My Hotel</dt>
+                <dd>{{selectedHotel.name}}</dd>
+              </ul>
+              <dt>My Restaurants</dt>
+                {% for restaurant in selectedRestaurants %}
+                <dd>{{restaurant.name}}</dd>
+                {% endfor %}
+              <dt>My Activities</dt>
+                {% for activity in selectedActivities %}
+                <dd>{{activity.name}}</dd>
+                {% endfor %}
+            </dl> <!-- #iteneraryList -->
+          </div> <!-- .row -->
+
+        </div> <!-- end of itenerary block -->
+
+      </div> <!-- .planner -->
+
+    </div> <!-- .row -->
+
+  </div> <!-- End Dashboard Page -->
+
+</div> <!-- .contentBody -->
+
+{% endblock %}
