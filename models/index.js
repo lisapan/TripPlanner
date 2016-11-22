@@ -6,11 +6,7 @@ const Restaurant = require('./restaurant');
 const Place = require('./place');
 const Day = require('./day');
 
-//Associations:
-//Give Place instances association methods
-Place.hasMany(Restaurant);
-Place.hasMany(Activity);
-Place.hasMany(Hotel);
+//ASSOCIATIONS
 
 //Give Activity table placeId
 Activity.belongsTo(Place);
