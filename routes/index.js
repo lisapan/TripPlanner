@@ -9,6 +9,10 @@ const Restaurant = models.Restaurant;
 module.exports = router;
 
 router.get('/', function (req, res, next) {
+  res.render('cover');
+});
+
+router.get('/dashboard', function (req, res, next) {
   const findingHotels = Hotel.findAll({
     order: 'name ASC'
   });
@@ -44,7 +48,7 @@ router.get('/', function (req, res, next) {
                findingSelectedRestaurants,
                findingSelectedActivities])
           .then(function (data) {
-            res.render('index', {
+            res.render('dashboard', {
               templateHotels: data[1],
               templateRestaurants: data[2],
               templateActivities: data[0],

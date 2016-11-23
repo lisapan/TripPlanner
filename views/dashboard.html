@@ -1,0 +1,137 @@
+{% extends 'layout.html' %}
+
+{% block title %}Your Trip{% endblock %}
+
+{% block content %}
+<div class = "contentBody">
+  <!-- Begin Dashboard Page-->
+  <div id="dashboard" class="clearfix">
+    <div class="map-container col-sm-8 col-lg-9">
+      <div>
+        <div id="map-canvas"></div>
+      </div>
+    </div> <!-- .map-container -->
+    <div id="control-panel" class="col-sm-4 col-lg-3 clearfix">
+      <div class="col-xs-6 col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-body" id="options-panel">
+            <div>
+              <h4>Hotels</h4>
+              <select data-type="hotel" id="hotel-choices">
+                {% for hotel in templateHotels %}
+                  <option>{{hotel.name}}</option>
+                {% endfor %}
+              </select>
+              <button data-action="add" class="btn btn-primary btn-circle pull-right">+</button>
+            </div> <!-- Hotel -->
+            <div>
+              <h4>Restaurants</h4>
+              <select data-type="restaurant" id="restaurant-choices">
+                {% for restaurant in templateRestaurants %}
+                  <option>{{restaurant.name}}</option>
+                {% endfor %}
+              </select>
+              <button data-action="add" class="btn btn-primary btn-circle pull-right">+</button>
+            </div> <!-- Restaurants -->
+            <div>
+              <h4>Activities</h4>
+              <select data-type="activity" id="activity-choices">
+                {% for activity in templateActivities %}
+                  <option>{{activity.name}}</option>
+                {% endfor %}
+              </select>
+              <button data-action="add" class="btn btn-primary btn-circle pull-right">+</button>
+            </div> <!-- Activities -->
+          </div> <!-- .panel-body -->
+        </div> <!-- .panel -->
+      </div> <!-- .col-X-6 Options Mod -->
+
+        <!-- Day Itinerary Block -->
+
+        <div class="col-xs-6 col-sm-12">
+      <h3>
+        <span id="day-title">
+          <span>Day 2</span>
+          <button class="btn btn-xs btn-danger remove btn-circle">x</button>
+        </span>
+      </h3>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="day-buttons">
+            <button class="btn btn-circle day-btn">1</button>
+            <!-- <button class="btn btn-circle day-btn current-day">2</button>
+            <button class="btn btn-circle day-btn">3</button>
+            <button class="btn btn-circle day-btn" id="day-add">+</button> -->
+          </div> <!-- day-buttons -->
+        </div> <!-- panel-heading -->
+        <div class="panel-body" id="itinerary">
+          <div>
+            <h4>My Hotel</h4>
+            <ul id="hotel-list" class="list-group">
+              <span class="title"><li>{{hotel.name}}</li></span>
+            </ul>
+          </div> <!-- My Hotel -->
+          <div>
+            <h4>My Restaurants</h4>
+            <ul id="restaurant-list" class="list-group">
+              <div class="itinerary-item">
+                {% for restaurant in selectedRestaurants %}
+                <span class="title"><li>{{restaurant.name}}</li></span>
+                {% endfor %}
+                <button class="btn btn-xs btn-danger remove btn-circle">x</button>
+              </div>
+            </ul>
+          </div> <!-- My Restaurants -->
+          <div>
+            <h4>My Activities</h4>
+            <ul id="activity-list" class="list-group">
+              <div class="itinerary-item">
+                {% for activity in selectedActivities %}
+                <span class="title"><li>{{activity.name}}</li></span>
+                {% endfor %}
+                <button class="btn btn-xs btn-danger remove btn-circle">x</button>
+              </div>
+            </ul>
+          </div> <!-- My Activities -->
+        </div> <!-- .panel-body -->
+      </div> <!-- .panel -->
+    </div> <!-- .col-X-6 Itenerary Mod -->
+
+        <div id="dayItenerary" class="col-xs-12 col-sm-6">
+            <h1 id="inteneraryHeader">Your Itenerary</h1>
+            <h1 id="thisDay">Day 1</h1>
+          <div class="dayPages">
+            <ul class="pagination">
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">+</a></li>
+            </ul>
+          </div>
+          <div class ="row" >
+            <dl id="iteneraryList">
+              <dt>My Hotel</dt>
+                <dd>{{selectedHotel.name}}</dd>
+              </ul>
+              <dt>My Restaurants</dt>
+                {% for restaurant in selectedRestaurants %}
+                <li>{{restaurant.name}}</li>
+                {% endfor %}
+              <dt>My Activities</dt>
+                {% for activity in selectedActivities %}
+                <dd>{{activity.name}}</dd>
+                {% endfor %}
+            </dl> <!-- #iteneraryList -->
+          </div> <!-- .row -->
+
+        </div> <!-- end of itenerary block -->
+
+      </div> <!-- .planner -->
+
+    </div> <!-- .row -->
+
+  </div> <!-- End Dashboard Page -->
+
+</div> <!-- .contentBody -->
+
+{% endblock %}

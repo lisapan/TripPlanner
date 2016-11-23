@@ -1,6 +1,24 @@
-#brand-icon {
-  padding: 0;
-  margin: 0; }
+#start {
+  position: inherit;
+  background: none;
+  color: white;
+  border-color: white;
+  margin-top: 50px; }
+  #start a {
+    color: white; }
+
+.navbar {
+  background: none;
+  border: none;
+  color: white;
+  margin-right: 30px; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+  border-color: white; }
+
+.navbar-default .navbar-nav > li > a {
+  color: white; }
 
 .container-fluid {
   padding-left: 0px; }
@@ -77,14 +95,14 @@ img {
 .dayHeader {
   padding: 5px;
   margin: 0;
-  font-size: 20px; }
+  font-size: 20px;
+  text-align: center; }
 
-#days {
-  padding: 0;
+#dayItenerary {
+  padding: 15px;
   margin: 0px 5px 0px 5px;
   background-color: #EEECEA;
-  border-radius: 6px;
-  height: 40%; }
+  border-radius: 6px; }
 
 .dayPages {
   padding: 0px 15px 0px 15px;
@@ -94,5 +112,5 @@ img {
 .pagination {
   margin: 5px 5px 0px 5px; }
 
-dl {
+#iteneraryList {
   padding: 15px; }
