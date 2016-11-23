@@ -11,25 +11,14 @@
 
 }
 
-.navbar {
-  background: none;
-  border: none;
-  color: white;
-  margin-right: 30px;
-}
-
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: white;
-  border-color: white;
-}
-
-.navbar-default .navbar-nav>li>a {
-    color: white;
+#brand-icon {
+  padding: 0;
+  margin: 0;
 }
 .container-fluid {
   padding-left: 0px;
+  color: white;
 }
-
 .bsc-jumbotron {
   background: url("../img/hands-way-guide-tourist.jpg") no-repeat center center scroll;
   background-size: cover;
@@ -42,19 +31,16 @@
   padding: 110px 0px 0px 0px;
   overflow: hidden;
 }
-
 .clearfix:after {
   content: "";
   display: table;
   clear: both;
 }
-
 img {
   position: relative;
   height: 10vmax;
   width: 100%
 }
-
 .cover-heading {
   font-family: 'Londrina Outline', cursive;
   font-size: 10vmax;
@@ -62,80 +48,73 @@ img {
   text-align: center;
   margin: 0;
 }
-
 .sub-heading {
   font-size: 5vmax;
   color: white;
   text-align: center;
   margin: 0;
 }
-
 .contentBody {
-	height: 100vh;
+    height: 100vh;
 }
-
 #dashboard {
-  padding: 0;
-  height: 100vh;
-  width: 100%;
+  position: relative;
 }
-
 #map {
-	padding: 0;
-	height: 100vmin;
-	margin: 0;
+    padding: 0;
+    height: 100vh;
+  width: 100%;
+    margin: 0;
 }
-
 .planner {
-	padding: 15px;
-	height: 100vmin;
-  float: right;
-	background-color: #BFB5AD;
+    position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 99;
 }
-
+@media(max-width: 600px){
+  .planner{
+      top: 10px;
+  left: 10px;
+  z-index: 99;
+  }
+}
 .fa-plus-circle {
-	color: #A3CCFF;
+    color: #A3CCFF;
   font-size: 20px;
 }
-
 #dayOptions {
-	padding: 15px;
-	margin: 50px 5px 20px 5px;
-	background-color: #EEECEA;
-	border-radius: 6px;
+    padding: 15px;
+    margin: 50px 5px 20px 5px;
+    background-color: #2F3F43;
+    border-radius: 6px;
 }
-
 .dropMenu {
-	width: 95%;
-	height: 35px;
-	margin: 0 3px 0 0;
-
+    width: 95%;
+    height: 35px;
+    margin: 0 3px 0 0;
+  color: black;
 }
-
 .dayHeader {
   padding: 5px;
   margin: 0;
   font-size: 20px;
-  text-align: center;
 }
-
-#dayItenerary {
-	padding: 15px;
-	margin: 0px 5px 0px 5px;
-	background-color: #EEECEA;
-	border-radius: 6px;
+#days {
+    padding: 2px 15px 0 15px;
+    margin: 0px 5px 0px 5px;
+    background-color: #2F3F43;
+    border-radius: 6px;
+    height: 40vh;
 }
-
 .dayPages {
-	padding: 0px 15px 0px 15px ;
-	margin: 0;
-	background-color: #706357;
+    padding: 0px 15px 0px 15px ;
+    margin: 0;
+    background-color: #E1F7F7;
 }
-
 .pagination {
-	margin: 5px 5px 0px 5px;
+    margin: 5px 5px 0px 5px;
 }
-
-#iteneraryList {
-	padding: 15px;
+dl {
+    padding: 15px;
 }
