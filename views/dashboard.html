@@ -18,34 +18,34 @@
            <!-- Select Hotel -->
            <div class="form-group">
            <label for="select">Hotels</label>
-             <select class = "dropMenu">
+             <select class = "dropMenu pull-right">
                {% for hotel in templateHotels %}
                  <option>{{hotel.name}}</option>
                {% endfor %}
              </select>
-             <span class="fa fa-plus-circle add-btn" aria-hidden="true"></span>
+             <a alt="Add Hotel" class="fa fa-plus-circle" aria-hidden="true"></a>
            </div> <!-- end hotel selection -->
 
            <!-- Select Activities -->
            <div class="form-group">
              <label for="select">Activities</label>
-             <select class = "dropMenu">
+             <select class = "dropMenu pull-right">
                {% for activity in templateActivities %}
                  <option>{{activity.name}}</option>
                {% endfor %}
              </select>
-             <span class="fa fa-plus-circle add-btn" aria-hidden="true"></span>
+             <a alt="Add Activity" class="fa fa-plus-circle" aria-hidden="true"></a>
            </div>  <!-- end activity selection -->
 
            <!--  Select Restaurants -->
            <div class="form-group">
              <label for="select">Restaurants</label>
-             <select class = "dropMenu">
+             <select class = "dropMenu pull-right">
                {% for restaurant in templateRestaurants %}
                  <option>{{restaurant.name}}</option>
                {% endfor %}
              </select>
-             <span class="fa fa-plus-circle add-btn" aria-hidden="true"></span>
+             <a alt="Add Restaurant" class="fa fa-plus-circle" aria-hidden="true"></a>
            </div> <!-- end restaurant selection -->
           </form>
          </div> <!-- End  Selection Block -->
@@ -65,18 +65,18 @@
              <dt>My Hotel</dt>
               <div>
                <dd>Andaz Wall Street</dd>
-               <span class="fa fa-plus-circle rm-btn" aria-hidden="true"></span>
+               <a alt="Remove Hotel" class="fa fa-minus-circle"></a>
              </div>
 
              <dt>My Restaurants</dt>
               <div>
                <dd>Chinatown Ice Cream Factory</dd>
-               <span class="fa fa-plus-circle rm-btn" aria-hidden="true"></span>
+               <a alt="Remove Restaurant" class="fa fa-minus-circle"></a>
               </div>
              <dt>My Activities</dt>
               <div>
                <dd>Jungsik</dd>
-               <span class="fa fa-plus-circle rm-btn" aria-hidden="true"></span>
+               <a alt="Remove Activity" class="fa fa-minus-circle"></a>
               </div>
            </dl> <!-- #iteneraryList -->
          </div> <!-- .row -->

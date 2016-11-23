@@ -77,7 +77,7 @@
 #dayOptions {
   padding: 15px;
   margin: 50px 5px 20px 5px;
-  background-color: #2F3F43;
+  background-color: #7F8080;
   border-radius: 6px;
   height: 100%;
   width: 100%; }
@@ -87,7 +87,7 @@
   height: 35px;
   padding: 15px;
   margin: 5px 0px 15px 0px;
-  color: black;
+  color: #7F8080;
   float: left; }
 
 .dayHeader {
@@ -98,7 +98,7 @@
 #days {
   padding: 2px 15px 0 15px;
   margin: 0px 5px 0px 5px;
-  background-color: #2F3F43;
+  background-color: #7F8080;
   border-radius: 6px;
   height: vh;
   width: 100%; }
@@ -106,10 +106,18 @@
 .dayPages {
   padding: 0px 15px 0px 15px;
   margin: 0;
-  background-color: #E1F7F7; }
+  background: #F8F8F8; }
 
 .pagination {
-  margin: 5px 5px 0px 5px; }
+  margin: 5px 5px 0px 5px;
+  color: #A3CCFF; }
+
+.pagination > .active > a {
+  background: #A3CCFF;
+  border-color: #A3CCFF; }
+
+.pagination > li > a {
+  color: #A3CCFF; }
 
 dl {
   padding: 15px; }
@@ -123,14 +131,16 @@ dd {
   padding: 0px 0px 10px 15px; }
 
 .fa-plus-circle {
-  color: #A3CCFF;
   font-size: 20px;
-  float: right !important; }
-
-.add-btn {
+  float: left !important;
   color: #A3CCFF;
   padding-top: 12px; }
 
-.rm-btn {
+.fa-minus-circle {
+  font-size: 20px;
+  float: right !important;
   color: #D9534F;
   padding-top: 2px; }
+
+a:hover {
+  text-decoration: none; }
