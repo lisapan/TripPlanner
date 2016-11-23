@@ -45,7 +45,7 @@ models.db.sync()
     .then(function () {
         app.listen(3001, function (err) {
             if (err) return console.error(err);
-            console.log('Server listening intently on 3000!');
+            console.log('Server listening intently on 3001!');
         });
     })
     .catch(console.error);
