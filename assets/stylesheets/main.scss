@@ -11,6 +11,12 @@
 
 }
 
+.navbar-brand {
+  float: left;
+  padding: 0px 0px 0px 10px;
+  margin-right: 15px;
+}
+
 #brand-icon {
   padding: 0;
   margin: 0;
@@ -71,28 +77,26 @@
   left: 10px;
   z-index: 99;
 }
-@media(max-width: 600px){
-  .planner{
-      top: 10px;
-  left: 10px;
-  z-index: 99;
-  }
-}
+
 .fa-plus-circle {
     color: #A3CCFF;
   font-size: 20px;
 }
 #dayOptions {
-    padding: 15px;
-    margin: 50px 5px 20px 5px;
-    background-color: #2F3F43;
-    border-radius: 6px;
+  padding: 15px;
+  margin: 50px 5px 20px 5px;
+  background-color: #2F3F43;
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
 }
 .dropMenu {
-    width: 95%;
-    height: 35px;
-    margin: 0 3px 0 0;
+  width: 90%;
+  height: 35px;
+  padding: 15px;
+  margin: 5px 0px 15px 0px ;
   color: black;
+  float: left;
 }
 .dayHeader {
   padding: 5px;
@@ -100,20 +104,47 @@
   font-size: 20px;
 }
 #days {
-    padding: 2px 15px 0 15px;
-    margin: 0px 5px 0px 5px;
-    background-color: #2F3F43;
-    border-radius: 6px;
-    height: 40vh;
+  padding: 2px 15px 0 15px;
+  margin: 0px 5px 0px 5px;
+  background-color: #2F3F43;
+  border-radius: 6px;
+  height: vh;
+  width: 100%;
 }
 .dayPages {
-    padding: 0px 15px 0px 15px ;
-    margin: 0;
-    background-color: #E1F7F7;
+  padding: 0px 15px 0px 15px ;
+  margin: 0;
+  background-color: #E1F7F7;
 }
 .pagination {
-    margin: 5px 5px 0px 5px;
+  margin: 5px 5px 0px 5px;
 }
 dl {
-    padding: 15px;
+  padding: 15px;
+}
+
+dt {
+  padding: 5px;
+  clear: both;
+}
+
+dd {
+  float: left;
+  padding: 0px 0px 10px 15px;
+}
+
+.fa-plus-circle {
+  color: #A3CCFF;
+  font-size: 20px;
+  float: right !important;
+}
+
+.add-btn {
+  color: #A3CCFF;
+  padding-top: 12px;
+}
+
+.rm-btn {
+  color: #D9534F;
+  padding-top: 2px;
 }
