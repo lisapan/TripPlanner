@@ -1,3 +1,8 @@
+.no-gap {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 #start {
   position:inherit;
   background: none;
@@ -97,7 +102,7 @@ select {
   color: #A3CCFF;
   font-size: 20px;
 }*/
-#dayOptions{ 
+#dayOptions{
   display: block;
   background-color: gray;
   border-bottom: 1px solid #e5e5e5;
@@ -201,7 +206,7 @@ a:hover {
     z-index: 99;
     width: 30%;
 
-/*    margin: 100px 0; 
+/*    margin: 100px 0;
     margin-left: 10px;
     max-width: 485px;
     position: relative;
