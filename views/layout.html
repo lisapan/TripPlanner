@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html>
 
-  <title>TripPlanner | NYC Vacation Organizer</title>
-
   <head>
      <!-- Viewport stuff (must be first in head)-->
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     <!-- Favicon stuff -->
-     <link rel="manifest" href="/manifest.json">
-     <meta name="msapplication-TileColor" content="#ffffff">
-     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-     <meta name="theme-color" content="#ffffff">
-
      <meta name="description" content="The quintessential vacation planner for the Big Apple.">
      <meta name="author" content="Lisa Pan and Chloe Rice">
-     <link rel="shortcut icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+     <!-- Favicon stuff -->
+     <link rel="shortcut icon" type="image/png" sizes="16x16" href="/tripplanner_icon.png">
 
      <!-- Google Fonts -->
      <link href="https://fonts.googleapis.com/css?family=Londrina+Outline" rel="stylesheet">
@@ -26,18 +19,14 @@
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   	<link href="/public/stylesheets/main.css" rel="stylesheet">
+
+    <title>TripPlanner | NYC Vacation Organizer</title>
   </head>
 
   <body>
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="navbar-header">
-        <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar-collapse" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button> -->
-        <a class="navbar-brand clearfix" href="/"><img alt="TripPlanner" src="../public/img/tripplanner_brand.svg"></a>
+        <a class="navbar-brand clearfix" href="#home"><img alt="TripPlanner" src="../public/img/tripplanner_brand.svg"></a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -45,11 +34,17 @@
       </div>
     </div>
 
-    <!-- Extension: dashboard.html  -->
+    <!-- Extension: index.html  -->
     {% block content %}
     {% endblock %}
 
     <!-- JAVASCRIPT-->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous">
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
 
     <!-- Render Map -->
     <script>
@@ -70,7 +65,7 @@
       google.maps.event.addDomListener(window, "resize", function() {
        var center = map.getCenter();
        google.maps.event.trigger(map, "resize");
-       map.setCenter(center); 
+       map.setCenter(center);
       });
     </script>
 
