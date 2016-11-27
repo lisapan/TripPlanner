@@ -1,3 +1,4 @@
+
 #start {
   position:inherit;
   background: none;
@@ -24,10 +25,7 @@
   height: 10vmax;
   width: 100%
 }
-.container-fluid {
-  padding-left: 0px;
-  color: white;
-}
+
 .bsc-jumbotron {
   background: url("../img/hands-way-guide-tourist.jpg") no-repeat center center scroll;
   background-size: cover;
@@ -69,7 +67,7 @@
 
 
 #map {
-  background-color: #b1b1b1;
+  background-color: #B1B1B1;
   height: 240px;
   left: 0;
   padding: 0;
@@ -93,18 +91,19 @@ select {
   width: calc(100% - 25px);;
 }
 
-/*.fa-plus-circle {
-  color: #A3CCFF;
-  font-size: 20px;
-}*/
-#dayOptions{ 
+#dayOptions{
   display: block;
   background-color: gray;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #F8F8F8;
+  color: #F8F8F8;
   margin: 0;
   padding: 16px 16px 16px;
   transition-duration: .2s;
   transition-property: transform, -webkit-transform;
+}
+
+h5 {
+  color: #F8F8F8;
 }
 
 .dropMenu {
@@ -115,6 +114,7 @@ select {
   color: #7F8080;
   float: left;
 }
+
 .dayHeader {
   padding: 5px;
   margin: 0;
@@ -123,7 +123,8 @@ select {
 #days {
   display: block;
   background-color: gray;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #F8F8F8;
+  color: #F8F8F8;
   margin: 0;
   padding: 0.5px 16px 16px;
   transition-duration: .2s;
@@ -201,7 +202,7 @@ a:hover {
     z-index: 99;
     width: 30%;
 
-/*    margin: 100px 0; 
+/*    margin: 100px 0;
     margin-left: 10px;
     max-width: 485px;
     position: relative;
