@@ -72,7 +72,7 @@
   background-color: #b1b1b1;
   height: 240px;
   left: 0;
-  padding: 30px 0 35px;
+  padding: 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -80,22 +80,29 @@
 }
 
 #control-panel {
+  padding: 0;
+  box-sizing: border-box;
   display: block;
   margin-bottom: 536px;
   margin: 0;
   width: 100%;
+  min-width: 300px;
 }
 
-.fa-plus-circle {
-    color: #A3CCFF;
-  font-size: 20px;
+select {
+  width: calc(100% - 25px);;
 }
+
+/*.fa-plus-circle {
+  color: #A3CCFF;
+  font-size: 20px;
+}*/
 #dayOptions{ 
   display: block;
   background-color: gray;
   border-bottom: 1px solid #e5e5e5;
   margin: 0;
-  padding: 24px 16px 16px;
+  padding: 16px 16px 16px;
   transition-duration: .2s;
   transition-property: transform, -webkit-transform;
 }
@@ -118,13 +125,13 @@
   background-color: gray;
   border-bottom: 1px solid #e5e5e5;
   margin: 0;
-  padding: 24px 16px 16px;
+  padding: 0.5px 16px 16px;
   transition-duration: .2s;
   transition-property: transform, -webkit-transform;
 }
 .dayPages {
   padding: 0px 15px 0px 15px ;
-  margin: 0;
+  margin: 0 -16px 0 -16px;
   background: #F8F8F8;
 }
 .pagination {
@@ -164,7 +171,7 @@ dd {
 
 .fa-minus-circle {
   font-size: 20px;
-  float: right !important;
+  float: left !important;
   color: #D9534F;
   padding-top: 2px;
 }
@@ -192,7 +199,7 @@ a:hover {
     top: 10px;
     left: 10px;
     z-index: 99;
-    width: 33%;
+    width: 30%;
 
 /*    margin: 100px 0; 
     margin-left: 10px;
@@ -205,6 +212,13 @@ a:hover {
   #dayOptions{
     border-bottom: none;
     margin-bottom: 20px;
+    border-radius: 6px;
+  }
+
+  #days {
+    border-bottom: none;
+    margin-bottom: 20px;
+    border-radius: 6px;
   }
 
 }

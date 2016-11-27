@@ -13,11 +13,10 @@
      <!-- PLANNING MODULE -->
      <div id="control-panel">
        <!-- Selection Block -->
-         <div id="dayOptions">
-           <form class="form-inline">
+         <div id="dayOptions" class="panel-body">
            <!-- Select Hotel -->
-           <div class="form-group">
-           <label for="select">Hotels</label>
+           <div>
+             <h5 for="select">Hotels</h5>
              <select class = "dropMenu pull-right">
                {% for hotel in templateHotels %}
                  <option>{{hotel.name}}</option>
@@ -27,8 +26,8 @@
            </div> <!-- end hotel selection -->
 
            <!-- Select Activities -->
-           <div class="form-group">
-             <label for="select">Activities</label>
+           <div>
+             <h5 for="select">Activities</h5>
              <select class = "dropMenu pull-right">
                {% for activity in templateActivities %}
                  <option>{{activity.name}}</option>
@@ -38,8 +37,8 @@
            </div>  <!-- end activity selection -->
 
            <!--  Select Restaurants -->
-           <div class="form-group">
-             <label for="select">Restaurants</label>
+           <div>
+             <h5 for="select">Restaurants</h5>
              <select class = "dropMenu pull-right">
                {% for restaurant in templateRestaurants %}
                  <option>{{restaurant.name}}</option>
@@ -47,7 +46,6 @@
              </select>
              <a alt="Add Restaurant" class="fa fa-plus-circle" aria-hidden="true"></a>
            </div> <!-- end restaurant selection -->
-          </form>
          </div> <!-- End  Selection Block -->
        <!-- Day Itinerary Block -->
        <div id="days">
@@ -64,19 +62,19 @@
            <dl id="iteneraryList">
              <dt>My Hotel</dt>
               <div>
-               <dd>Andaz Wall Street</dd>
                <a alt="Remove Hotel" class="fa fa-minus-circle"></a>
+               <dd>Andaz Wall Street</dd>
              </div>
 
              <dt>My Restaurants</dt>
               <div>
-               <dd>Chinatown Ice Cream Factory</dd>
                <a alt="Remove Restaurant" class="fa fa-minus-circle"></a>
+               <dd>Chinatown Ice Cream Factory</dd>
               </div>
              <dt>My Activities</dt>
               <div>
-               <dd>Jungsik</dd>
                <a alt="Remove Activity" class="fa fa-minus-circle"></a>
+               <dd>Jungsik</dd>
               </div>
            </dl> <!-- #iteneraryList -->
          </div> <!-- .row -->
